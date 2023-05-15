@@ -1,0 +1,20 @@
+.container {
+    border : 1px solid black;
+    margin : 20px;
+    padding : 10px;
+   
+}
+h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+.taille {
+    margin : 5px;
+}
+#btn {
+    display: flex;
+    align-items: center;
+}
