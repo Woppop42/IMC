@@ -10,24 +10,52 @@
 </head>
 <body>
     <div class="container">
-        <h1>Calcul de votre IMC</h1>
+        <div classe="title">
+            <h1>Calcul de votre IMC</h1>
+        </div>
         <form action="">
             <div class="inp">
                 <div class="taille">
-                    <label for="taille">Votre taille en cm</label>
+                    <div>
+                        <label for="taille">Votre taille en cm</label>
+                    </div>
                 <input type="number" id="taille" required autofocus>
                 </div>
                 <div class="taille">
-                    <label for="poids">Poids en KG</label>
+                    <div>
+                        <label for="poids">Poids en KG</label>
+                    </div>
+                    
                     <input type="number" id="poids" required>
                 </div>
+                <div class="btn">
+                    <button id="btn" onclick="finale(event)">Calculer</button>
+                </div>
                 
-                <button id="btn" onclick="finale(event)">Calculer</button>
+            </form>
             </div>
-        </form>
-        <div class="tab">
-        </div>
+            <div class="hr">
+                <hr>
+            </div>
+            <div class="table">
+                <H2>Les valeurs de l'IMC</H2>
+        <table>
+            <tbody>
+                <tr><td class="imc">Moins de 18,5</td><td>Insuffisance pondérale (maigreur)</td></tr>
+                <tr><td class="imc">18,5 à 25</td><td>Corpulence normale</td></tr>
+                <tr><td class="imc">De 25 à 30</td><td>Surpoids</td></tr>
+                <tr><td class="imc">De 30 à 35</td><td>Obésité modérée</td></tr>
+                <tr><td class="imc">De 35 à 40</td><td>Obésité sévère</td></tr>
+                <tr><td class="imc">40 et +</td><td>Obésité morbide</td></tr>
+                
+        </table>    
+            </div>
+            
+        
     </div>
     <div id="result"></div>
+    
+        
+    </div>
 </body>
 </html>
