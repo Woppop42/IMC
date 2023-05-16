@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
 body{
     background-color: rgb(232, 136, 115);
-    font-family: 'Lato', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color : rgb(27, 26, 55);
 }
 
@@ -76,9 +76,10 @@ input {
 hr {
     border-color: rgb(27, 26, 55);
     border-radius : 10px;
+    width : 60%;
 }
-.hr {
+.hr1 {
     margin-bottom : 15px;
-    margin-top : 15px;
+    margin-top : 25px;
     
 }
