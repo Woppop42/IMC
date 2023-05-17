@@ -58,18 +58,42 @@ function displayDescription(imc)
         
     }else if(imc > 40)
     {
-        description = "L'obésité morbide expose à des complications très sévères telles que problèmes cardiovasculaires, insuffisance respiratoire avec hypoventilation alvéolaire ou encore cancer hépatique, pouvant aller jusqu'au décès.";
+        description = "L'obésité morbide expose à des complications très sévères telles que problèmes cardiovasculaires, insuffisance respiratoire, pouvant aller jusqu'au décès.";
         
     }
     let descText = document.querySelector('#description');
     descText.textContent = description;
 }
 
+function verificationTaille(taille)
+{
+    let tailleStr = taille.toString();
+    if(tailleStr.indexOf(',') !== -1)
+    {
+        tailleVerif = tailleStr.replace(',', '.');
+        return taille;
+    }
+}
+function verificationPoids(poids)
+{
+    let poidsStr = poids.toString();
+    if(poidsStr.indexOf(',') !== -1)
+    {
+        poidsVerif = poidsStr.replace(',', '.');
+        console.log(poidsVerif);
+        return poidsVerif;
+    }
+}
+
+
+
 function finale(event)
 {
     let taille = document.querySelector('#taille').value;
     let poids = document.querySelector('#poids').value;
     event.preventDefault();
+    verificationPoids(poids);
+    verificationTaille(taille);
     imc = calcul(taille, poids);
     displayResult(imc);
     displayDescription(imc);
